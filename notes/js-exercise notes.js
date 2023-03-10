@@ -1,3 +1,16 @@
+"use strict";
+
+//Exercise 3: Data Types, Operators, Variables
+
+    var scheduleConflict = false;
+    var classFull = true;
+    var enrollPossible = (scheduleConflict && classFull);
+
+    var productPromo = (twoPlusItems && offerValid) || (isPremium && offerValid)
+    var twoPlusItems = true
+    var offerValid = true
+    var isPremium = false
+
 //Exercise 4: Creating variables for user/pass for certain parameters
 
 var username = 'codeup'
@@ -35,7 +48,7 @@ function whiteSpace(username, password){
         return false
     }
 }
-var minChar = password.length >= 5
-var passUserSame = password.includes(username)
-var maxChar = username.length <= 20
-var whiteSpace = username.length === username.trim().length && password.length === password.trim().length
+var minChar = password.length >= 5;
+var passUserSame = password.includes(username);
+var maxChar = username.length <= 20;
+var whiteSpace = username.length === username.trim().length && password.length === password.trim().length;
