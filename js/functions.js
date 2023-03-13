@@ -126,12 +126,13 @@ console.log(calculateTip());
 /*
 function applyDiscount(discPrice){
     var origPrice = prompt("What is the original price?");
-    var discPerc = prompt("What is the discount amount?");
+    var discPerc = prompt("What is the discount percent?");
     console.log(origPrice);
     console.log(discPerc);
-    var discAmount = (origPrice * discPerc);
+    var discConv = (discPerc / 100);
+    var discAmount = (origPrice * discConv);
     var discPrice = (origPrice - discAmount);
-    alert("Your new amount comes out to be $" + discPrice);
+    alert("Your new total comes out to be $" + discPrice);
 }
 console.log(applyDiscount());
 */
@@ -144,3 +145,5 @@ function timesThreeNum(numOne, numTwo, numThree){
 }
 console.log(timesThreeNum(1, 2, 3));
 */
+
+
