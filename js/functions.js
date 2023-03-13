@@ -10,8 +10,8 @@
  */
 
 /*
-function sayHello(x) {
-    return("Hello " + x);
+function sayHello(name) {
+    return("Hello " + name);
 }
 console.log()
 */
@@ -25,10 +25,10 @@ console.log()
  */
 
 /*
-var name = prompt('What is your name?');
-console.log(name);
-var helloMessage = sayHello(name);
-    console.log(helloMessage());
+var userName = prompt('What is your name?');
+console.log(userName);
+var helloMessage = sayHello(userName)
+console.log()
 */
 
 /**
