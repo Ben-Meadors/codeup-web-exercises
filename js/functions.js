@@ -99,10 +99,11 @@ console.log()
 /*
 function calculateTip(tip){
     var billTotal = prompt("What is your total bill?");
-    var tipPercent = prompt("What percent would you like to tip?");
+    var tipPercent = prompt("What percentage would you like to tip?");
     console.log(billTotal);
     console.log(tipPercent);
-    var tip = (billTotal * tipPercent);
+    var tipConv = (tipPercent / 100)
+    var tip = (billTotal * tipConv);
     alert("You should tip $" + tip);
 }
 console.log(calculateTip());
