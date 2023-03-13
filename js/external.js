@@ -13,15 +13,15 @@ alert("That's great, " + favColor + " is my favorite too!");
 
 /*
 var movieAmount = Number(prompt("How many movies did you get?"));
-console.log(movieAmount)
+console.log(movieAmount);
 var movieOne = Number(prompt("How many days will you be renting Little Mermaid?"));
 var movieTwo = Number(prompt("How many days will you be renting Brother Bear?"));
 var movieThree = Number(prompt("How many days will you be renting Hercules?"));
 var moviePrice = 3;
-console.log(movieOne, movieTwo, movieThree)
-alert("Movies are $3 a day to rent, do you wish to continue?")
+console.log(movieOne, movieTwo, movieThree);
+alert("Movies are $3 a day to rent, do you wish to continue?");
 var movieTotal = (moviePrice * movieOne) + (moviePrice * movieTwo) + (moviePrice * movieThree)
-console.log(movieTotal)
+console.log(movieTotal);
 alert("Your total is $" + movieTotal);
 */
 
