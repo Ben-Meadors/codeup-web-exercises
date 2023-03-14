@@ -13,7 +13,7 @@
 function sayHello(name) {
     return("Hello " + name);
 }
-console.log()
+console.log(sayHello(name));
 */
 
 /**
@@ -25,10 +25,10 @@ console.log()
  */
 
 /*
-var userName = prompt('What is your name?');
-console.log(userName);
-var helloMessage = sayHello(userName)
-console.log()
+var name = prompt('What is your name?');
+console.log(name);
+var helloMessage = sayHello(name);
+console.log(helloMessage);
 */
 
 /**
@@ -68,14 +68,11 @@ var random = Math.floor((Math.random() * 3) + 1);
  */
 
 /*
-
 function isTwo(someNumber){
     return someNumber ===2;
 }
-console.log(isTwo);
-
-isTwo(random)
-console.log()
+console.log(isTwo(random));
+console.log(random);
 */
 
 /**
@@ -102,7 +99,7 @@ function calculateTip(tip){
     var tipPercent = prompt("What percentage would you like to tip?");
     console.log(billTotal);
     console.log(tipPercent);
-    var tipConv = (tipPercent / 100)
+    var tipConv = (tipPercent / 100);
     var tip = (billTotal * tipConv);
     alert("You should tip $" + tip);
 }
@@ -128,8 +125,6 @@ console.log(calculateTip());
 function applyDiscount(discPrice){
     var origPrice = prompt("What is the original price?");
     var discPerc = prompt("What is the discount percent?");
-    console.log(origPrice);
-    console.log(discPerc);
     var discConv = (discPerc / 100);
     var discAmount = (origPrice * discConv);
     var discPrice = (origPrice - discAmount);
@@ -138,13 +133,17 @@ function applyDiscount(discPrice){
 console.log(applyDiscount());
 */
 
-/**Example
-/*
-function timesThreeNum(numOne, numTwo, numThree){
-    var multiplied = numOne * numTwo * numThree
-    alert("Your numbers multiplied together equals " + multiplied);
+//Maybe better?
+
+function applyDiscount(){
+    var origPrice = prompt("What is the original price?");
+    var discPerc = prompt("What is the discount percent?");
+    var discConv = (discPerc / 100);
+    var discAmount = (origPrice * discConv);
+    var discPrice = (origPrice - discAmount);
+    alert("Your new total comes out to be $" + discPrice);
 }
-console.log(timesThreeNum(1, 2, 3));
-*/
+console.log(applyDiscount());
+
 
 
