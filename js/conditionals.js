@@ -22,6 +22,7 @@
  * console.logging the function's return value
  */
 
+//without alerts
 /*
 function analyzeColor(someColor){
     if (someColor === "cyan"){
@@ -57,7 +58,7 @@ console.log(randomColor);
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
 
-
+/*
 function analyzeColor(someColor){
     switch(someColor) {
         case "cyan":
@@ -74,7 +75,7 @@ function analyzeColor(someColor){
             break;
     }
 }
-
+*/
 
 /**
  * TODO:
@@ -83,9 +84,24 @@ function analyzeColor(someColor){
  * function to show it to the user.
  */
 
-var userColor = prompt("Pick a random color");
-analyzeColor(userColor);
 
+/*
+var userColor = prompt("Pick a random color");
+*/
+
+//with alerts
+/*
+function analyzeColor(someColor){
+    if (someColor === "cyan"){
+        alert("Cyan is such a pretty color!");
+    } else if (someColor === "red"){
+        alert("Red is kinda okay");
+    } else if (someColor === "green"){
+        alert("Did you know grass is green?");
+    } else alert("I don't think I know that color..");
+}
+analyzeColor(userColor);
+*/
 
 /* ########################################################################## */
 
@@ -109,6 +125,49 @@ analyzeColor(userColor);
  * return value.
  */
 
+//calculate total function
+    //
+/*
+var numbers = [0, 1, 2, 3, 4, 5];
+var luckyNumbers = numbers[Math.floor(Math.random() * numbers.length)];
+console.log(luckyNumbers);
+*/
+
+/*
+function calculateTotal(){
+    if (luckyNumbers === 0) {
+        console.log(total - (total * 0));
+    } else if (luckyNumbers === 1) {
+        console.log(total - (total * .1));
+    } else if (luckyNumbers === 2) {
+        console.log(total - (total * .25));
+    } else if (luckyNumbers === 3) {
+        console.log(total - (total * .35));
+    } else if (luckyNumbers === 4) {
+        console.log(total - (total * .5));
+    } else if (luckyNumbers === 5) {
+        console.log(total - (total * 1));
+    }
+}
+*/
+/*
+function calculateTotal(num, total) {
+    switch(num) {
+        case 0:
+            return total
+        case 1:
+            return total -= total * .1
+        case 2:
+            return total -= total * .25
+        case 3:
+            return total -= total * .35
+        case 4:
+            return total -= total * .5
+        case 5:
+            return total -= total * 1
+    }
+}
+
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 5.
@@ -118,13 +177,41 @@ analyzeColor(userColor);
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+/*
+var luckyNumber = Math.floor(Math.random() * 6);
+var total = prompt("What is the total price?");
+alert("Your lucky number was " + luckyNumber + "!");
+alert("Your original price was $" + total + "." + " Your new total is $" + calculateTotal(luckyNumber, total));
+*/
+function isEven(yourNumber){
+    return yourNumber % 2 == 0
+}
+function plusOneHundred(yourNumber){
+    return yourNumber + 100
+}
+function  isPositive(yourNumber){
+    return yourNumber > 0
+}
+var numberStuff = confirm("Would you like to enter a number?");
+if (numberStuff) {
+    var yourNumber = prompt("Please enter a number");
+}    else if{ (isNaN(yourNumber)){
+    return ("Not a number")
+} else {
+    alert("Too bad you didn't enter a number dummy, now you'll never know what could have happened..")
+}
+
+
+
+
 
 /**
  * TODO:
  * Write some JavaScript that uses a `confirm` dialog to ask the user if they
  * would like to enter a number. If they click 'Ok', prompt the user for a
  * number, then use 3 separate alerts to tell the user:
+ *
+ *
  *
  * - whether the number is even or odd
  * - what the number plus 100 is
