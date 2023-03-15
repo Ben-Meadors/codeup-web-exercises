@@ -187,19 +187,49 @@ function isEven(yourNumber){
     return yourNumber % 2 == 0
 }
 function plusOneHundred(yourNumber){
-    return yourNumber + 100
+    return parseInt(yourNumber) + 100
 }
 function  isPositive(yourNumber){
     return yourNumber > 0
 }
-var numberStuff = confirm("Would you like to enter a number?");
-if (numberStuff) {
-    var yourNumber = prompt("Please enter a number");
-}    else if{ (isNaN(yourNumber)){
-    return ("Not a number")
-} else {
-    alert("Too bad you didn't enter a number dummy, now you'll never know what could have happened..")
+
+if (confirm("Would you like to enter a number?")){
+    var yourNumber = prompt("Please enter a number")
+}else {
+    (alert("Too bad you didn't enter a number dummy, now you'll never know what could have happened.."))
 }
+
+
+
+ switch(yourNumber){
+     case (isNaN(yourNumber)):
+         alert("Could you please enter a number value and not whatever it is you typed?")
+         break;
+     case (yourNumber >= 0):
+         alert("Your number is positive")
+         break;
+     case (yourNumber <= 0):
+         alert("Your number is negative")}
+
+/*
+alert("
+ } else if (isNaN(yourNumber)){
+
+{
+if (yourNumber >= 0){
+    alert("Your number is positive")
+}else {
+    alert("Your number is negative")
+}
+if (yourNumber % 2 == 0) {
+    alert("Your number is even")
+}else {
+    alert("Your number is odd")
+}
+
+alert("Your number plus 100 is " + plusOneHundred(yourNumber))
+}
+*/
 
 
 
@@ -247,3 +277,10 @@ if (userGuess === pass){
     alert("man you suck, better keep guessing LOL");
 }
 */
+/*
+}else if (yourNumber = null || isNaN(yourNumber)) {
+    alert("Could you please enter a number value and not whatever it is you typed?")
+}else{
+    alert("Too bad you didn't enter a number dummy, now you'll never know what could have happened..")
+}
+ */
