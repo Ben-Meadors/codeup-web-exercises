@@ -183,57 +183,6 @@ var total = prompt("What is the total price?");
 alert("Your lucky number was " + luckyNumber + "!");
 alert("Your original price was $" + total + "." + " Your new total is $" + calculateTotal(luckyNumber, total));
 */
-function isEven(yourNumber){
-    return yourNumber % 2 == 0
-}
-function plusOneHundred(yourNumber){
-    return parseInt(yourNumber) + 100
-}
-function  isPositive(yourNumber){
-    return yourNumber > 0
-}
-
-if (confirm("Would you like to enter a number?")){
-    var yourNumber = prompt("Please enter a number")
-}else {
-    (alert("Too bad you didn't enter a number dummy, now you'll never know what could have happened.."))
-}
-
-
-
- switch(yourNumber){
-     case (isNaN(yourNumber)):
-         alert("Could you please enter a number value and not whatever it is you typed?")
-         break;
-     case (yourNumber >= 0):
-         alert("Your number is positive")
-         break;
-     case (yourNumber <= 0):
-         alert("Your number is negative")}
-
-/*
-alert("
- } else if (isNaN(yourNumber)){
-
-{
-if (yourNumber >= 0){
-    alert("Your number is positive")
-}else {
-    alert("Your number is negative")
-}
-if (yourNumber % 2 == 0) {
-    alert("Your number is even")
-}else {
-    alert("Your number is odd")
-}
-
-alert("Your number plus 100 is " + plusOneHundred(yourNumber))
-}
-*/
-
-
-
-
 
 /**
  * TODO:
@@ -256,6 +205,39 @@ alert("Your number plus 100 is " + plusOneHundred(yourNumber))
  * HINT: The way we prompt for a value could be improved
  */
 
+function isEven(yourNumber){
+    if (yourNumber % 2 == 0) {
+        alert("Your number is even!");
+    }else {
+        alert("Your number is odd!")
+    }
+}
+function plusOneHundred(yourNumber){
+    return (yourNumber) + 100;
+}
+function  isPositive(yourNumber){
+    if (yourNumber >= 0) {
+        alert("Your number is positive!");
+    }else alert("Your number is negative!");
+}
+function notNumber(yourNumber) {
+    if (isNaN(yourNumber)) {
+        alert("Could you please enter a real number");
+    }
+}
+
+switch (confirm("Would you like to enter a number?")){
+    case true:
+        var yourNumber = +prompt("PLEASE ENTER A NUMBER");
+        isEven(yourNumber);
+        isPositive(yourNumber);
+        alert("Your number plus one hundred is " + plusOneHundred(yourNumber));
+        break;
+    default:
+        alert("Too bad you didn't enter a number dummy, now you'll never know what could have happened..")
+}
+
+
 /*
 function weatherFit(degrees) {
     if (degrees < 50) {
@@ -277,10 +259,4 @@ if (userGuess === pass){
     alert("man you suck, better keep guessing LOL");
 }
 */
-/*
-}else if (yourNumber = null || isNaN(yourNumber)) {
-    alert("Could you please enter a number value and not whatever it is you typed?")
-}else{
-    alert("Too bad you didn't enter a number dummy, now you'll never know what could have happened..")
-}
- */
+
