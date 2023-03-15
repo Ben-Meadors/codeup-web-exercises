@@ -204,7 +204,7 @@ alert("Your original price was $" + total + "." + " Your new total is $" + calcu
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
-
+/*
 function isEven(yourNumber){
     if (yourNumber % 2 == 0) {
         alert("Your number is even!");
@@ -220,24 +220,47 @@ function  isPositive(yourNumber){
         alert("Your number is positive!");
     }else alert("Your number is negative!");
 }
-function notNumber(yourNumber) {
-    if (isNaN(yourNumber)) {
-        alert("Could you please enter a real number");
-    }
+function notNumber(num1) {
+    if (isNaN(num1)) {
+        alert("Could you please enter a real number?");
+    } else alert("Thanks for the number");
 }
+
+var num1;
 
 switch (confirm("Would you like to enter a number?")){
     case true:
-        var yourNumber = +prompt("PLEASE ENTER A NUMBER");
+        var yourNumber = +prompt("Please enter a number");
+        notNumber(yourNumber);
         isEven(yourNumber);
         isPositive(yourNumber);
         alert("Your number plus one hundred is " + plusOneHundred(yourNumber));
         break;
     default:
-        alert("Too bad you didn't enter a number dummy, now you'll never know what could have happened..")
+        alert("Too bad you didn't enter a number, now you'll never know what could have happened..")
 }
-
-
+*/
+var userChoice = confirm("Would you like to enter a number?")
+if (userChoice) {
+    var input = prompt("Please enter a number")
+    console.log(input)
+    if (isNaN(input)) {
+        alert("The input you entered is not a number")
+    } else {
+        if (input % 2 == 0) {
+            alert("The input you entered is even")
+        } else {
+            alert("The input you entered is odd")
+        }
+        var plus100 = Number(input) + 100
+        alert(`The input you entered + 100 is equal to ${plus100}`)
+        if (input < 0) {
+            alert("The input you entered is negative")
+        } else {
+            alert("The input you entered is positive")
+        }
+    }
+}
 /*
 function weatherFit(degrees) {
     if (degrees < 50) {
