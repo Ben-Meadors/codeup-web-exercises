@@ -61,4 +61,19 @@
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
 
+    const nums = [1, 2, 3, 4, 5];
+    const lastElement = nums[nums.length - 1];
+    function first(input1){
+        console.log(input1[0]);
+    }
+    first(nums);
+    function second(input2){
+        console.log(input2[1]);
+    }
+    second(nums);
+    function last(input3){
+        console.log(lastElement);
+    }
+    last(nums);
+
 })();
