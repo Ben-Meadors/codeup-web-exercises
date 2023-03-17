@@ -52,3 +52,29 @@ var minChar = password.length >= 5;
 var passUserSame = password.includes(username);
 var maxChar = username.length <= 20;
 var whiteSpace = username.length === username.trim().length && password.length === password.trim().length;
+
+
+/*
+describe("strLength", function(){
+    it("should be defined function", function(){
+        expect(typeof strLength).toBe("function");
+    });
+    it("should return string length when passed string", function(){
+        expect(typeof strLength("words")).toBe("number");
+        expect(typeof strLength("oh")).toBe("number");
+        expect(typeof strLength("expectations")).toBe("number");
+    });
+    it("should be string", function(){
+        expect(typeof strLength(7)).toBe(false);
+    });
+});
+*/
+/*
+for (var i = 0; i <= 10; i++){
+    if (i % 2 !== 0){
+        continue;
+    }
+    console.log(i + " is an even number");
+}
+*/
+
