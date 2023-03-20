@@ -60,7 +60,7 @@ for(let i = 0; i < 10; i++){
     if (tenGen % 2 === 0) {
         console.log(tenGen + " is even");
     } else{
-        console.log(tenGen + " is even");
+        console.log(tenGen + " is odd");
     }
 }
 
@@ -80,3 +80,5 @@ for(let i = 0; i < 10; i++){
 for(var i = 100; i >= 5; i -= 5){
     console.log(i);
 }
+
+

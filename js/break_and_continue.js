@@ -34,14 +34,37 @@ for(let i = 1; i < 50; i++) {
 }
 */
 
-var userNumber = prompt('Please enter an odd number')
-for (let i = 1; i <= 50; i++) {
-    if (i % 2 !== 0) {
-        console.log(i + " is odd");
-        continue;
-    } else if (i === userNumber){
-        console.log('skipping ' + userNumber);
-    } else{
-        break;
+var userNumber = prompt('Please enter an odd number between 1 and 50')
+function isValidInput(userInput) {
+    if (userInput === undefined) {
+        return false
+    }
+    if(isNaN(userInput)) {
+        return false
+    }
+    if (userInput % 2 == 0) {
+        return false
+    }
+    if (userInput > 50 || userInput < 1) {
+        return false
+    }
+    return true
+}
+while(true) {
+    var isValid = isValidInput(userNumber)
+    if (isValid) {
+        break
+    }
+    userNumber = prompt('Invalid! Please enter an odd number between 1 and 50')
+}
+console.log(`Number to skip is: ${userNumber}`)
+for (i = 1; i < 50; i++) {
+    if (i == userNumber) {
+        continue
+    }
+    if (i % 2 == 1){
+        console.log(`Here is an odd number: ${i}`)
     }
 }
+
+
