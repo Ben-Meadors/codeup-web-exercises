@@ -54,6 +54,13 @@ console.log(school);
         console.log("Hello from " + person.firstName + " " +person.lastName);
     }
     sayHello();
+     */
+    //instructor//
+    /*
+    person.sayHello = function(){
+    return "Hello from " + person.firstName + " " + person.lastName + "!";
+    }
+    console.log(person.sayHello());
 */
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -68,6 +75,7 @@ console.log(school);
      * represents one shopper. Use a foreach loop to iterate through the array,
      * and console.log the relevant messages for each person
      */
+    /*
     const cameronTotal = 180;
     const ryanTotal = 250;
     const georgeTotal = 320;
@@ -81,15 +89,24 @@ function discount(personTotal){
 discount(cameronTotal);
 discount(ryanTotal);
 discount(georgeTotal);
+*/
+
      var shoppers = [
          {name: 'Cameron', amount: 180},
          {name: 'Ryan', amount: 250},
          {name: 'George', amount: 320}
      ];
+//instructor//
+    shoppers.forEach(function(shopper){
+        if(shopper.amount > 200) {
+            var discountAmount = shopper.amount * .12;
+            var newTotal = shopper.amount - discountAmount
+            console.log("Name: " + shopper.name + ", Amount: " + shopper.amount + ", Discount: " + discountAmount + "New total: " + newTotal)
+        }else {
+            console.log("No discount for you")
+        }
+        })
 
-    shoppers.forEach((person) => {
-        console.log(person);
-    });
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -124,10 +141,12 @@ discount(georgeTotal);
                 firstName: "James",
                 lastName: "Joyce"
             }}
-    ]
-    //console.log(books[1].title)
-    //console.log(books[1].author.firstName)
-    //console.log(books[1].author.lastName)
+    ];
+
+    console.log(books[1].title)
+    console.log(books[1].author.firstName)
+    console.log(books[1].author.lastName)
+
 
     /**
      * TODO:
@@ -153,7 +172,9 @@ discount(georgeTotal);
      *      ---
      *      ...
      */
-
+    for(var i = 0; i < books.length; i++){
+        showBookInfo(books[i]);
+    }
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -164,5 +185,40 @@ discount(georgeTotal);
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+    var createBook = (title, author) => {
+        var firstName = author.split(' ')[0];
+        var lastName = author.split(' ')[1];
+        console.log(firstName, lastName);
+        return{
+            title: title,
+            author: {
+                firstName: firstName,
+                lastName: lastName
+            }
+        }
+    }
+
+
+    function showBookInfo(bookObj){
+        console.log("Book # " + (i + 1));
+        console.log("Title: " + books[i].title);
+        console.log("Author: " + books[i].author.firstName + " " + books[i].author.lastName);
+    }
+
+})();
+
+
+(function(){
+
+
+
+
+
+
+
+
+
+
 
 })();
