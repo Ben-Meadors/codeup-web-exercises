@@ -1,4 +1,39 @@
 .fancy-header {
-    color: purple;
+    color: cyan;
     text-decoration: underline;
+}
+
+h1 { text-align: center}
+
+h2 {
+    color: orange;
+    text-decoration: underline;
+}
+
+body {
+    background-image: url("https://images.pexels.com/photos/583848/pexels-photo-583848.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+}
+
+.lower-greek {
+    list-style: lower-greek;
+}
+
+ul {
+    font-size: 1.5em;
+}
+
+ol {
+    font-size: 1.5em;
+}
+
+a:link {
+    color:blue;
+}
+
+a:visited {
+    color:rebeccapurple;
+}
+
+a:hover {
+    color:blue;
 }
