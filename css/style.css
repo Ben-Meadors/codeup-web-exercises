@@ -1,9 +1,8 @@
 .fancy-header {
+    text-align: center;
     color: cyan;
     text-decoration: underline;
 }
-
-h1 { text-align: center}
 
 h2 {
     color: orange;
