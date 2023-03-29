@@ -33,6 +33,9 @@ h2, h3 {
     background: white;
     padding: 1em;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     /* enter needed declarations here */
 }
 
@@ -41,7 +44,6 @@ section {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 1em 0em;
     /* enter needed declarations here */
 }
 
