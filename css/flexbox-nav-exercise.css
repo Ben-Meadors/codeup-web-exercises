@@ -16,10 +16,12 @@ article{
 }
 nav {
     background: #949494;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: bold;
 }
 
 section a{
-    font-family: "Work Sans";
+    font-family: 'Montserrat', sans-serif;
     color: black;
     text-decoration: none;
 }
@@ -32,7 +34,7 @@ ul {
 nav a {
     text-decoration: none;
     color: black;
-    font-family: Montserrat;
+
     font-weight: bold;
     display: inline-block; /* inline-block to increase clickable area beyond the text */
     padding: .5em; /* increases clickable area of anchor tags on all sides by 1em */
@@ -43,14 +45,12 @@ nav a:hover {
 .logo-div{
     display: flex;
     font-size: 3em;
-    font-family: Montserrat;
     margin-right: 2em;
 }
 .social-media-links{
     display: flex;
 }
 section{
-    font-family: "Work Sans";
     height: 100%;
 }
 h1{
