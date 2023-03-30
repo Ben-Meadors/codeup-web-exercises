@@ -44,7 +44,7 @@ nav a:hover {
     display: flex;
     font-size: 3em;
     font-family: Montserrat;
-    margin: auto;
+    margin-right: 2em;
 }
 .social-media-links{
     display: flex;
