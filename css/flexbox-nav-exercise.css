@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+article{
+    background: #949494;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+}
+nav {
+    background: #949494;
+}
+
+section a{
+    font-family: "Work Sans";
+    color: black;
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* made unordered list a flex container */
+}
+nav a {
+    text-decoration: none;
+    color: black;
+    font-family: Montserrat;
+    font-weight: bold;
+    display: inline-block; /* inline-block to increase clickable area beyond the text */
+    padding: .5em; /* increases clickable area of anchor tags on all sides by 1em */
+}
+nav a:hover {
+    background: blue;
+}
+.logo-div{
+    display: flex;
+    font-size: 3em;
+    font-family: Montserrat;
+    margin: auto;
+}
+.social-media-links{
+    display: flex;
+}
+section{
+    font-family: "Work Sans";
+    height: 100%;
+}
+h1{
+    margin: 0;
+}
