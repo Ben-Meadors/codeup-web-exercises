@@ -54,7 +54,7 @@
                 </ul>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"><div class="card">
-                        <div class="card-body">
+                        <div class="card-body p-3 mb-2 bg-primary text-white">
                             Choose Size and Crust
                         </div>
                         <div class="card">
@@ -65,9 +65,9 @@
                                 <ul class="list-group list-group-flush">
                                     <li class="list-group-item">Garlic seasoned crust with a rich buttery taste.</li>
                                     <li class="list-group-item">
-                                        <input class="form-check-input" type="radio" value="size-1" aria-label="...">Small (10")</li>
+                                        <input class="form-check-input" type="radio" value="size-1" aria-label="..."> Small (10")</li>
                                     <li class="list-group-item">
-                                        <input class="form-check-input" type="radio" value="size-1" aria-label="...">Medium (12")</li>
+                                        <input class="form-check-input" type="radio" value="size-1" aria-label="..."> Medium (12")</li>
                                 </ul>
                             </div>
                             <div class="card">
@@ -77,9 +77,9 @@
                                 <ul class="list-group list-group-flush">
                                     <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio.</li>
                                     <li class="list-group-item">
-                                        <input class="form-check-input me-1" type="radio" value="size-2" aria-label="...">Medium (12")</li>
+                                        <input class="form-check-input me-1" type="radio" value="size-2" aria-label="..."> Medium (12")</li>
                                     <li class="list-group-item">
-                                        <input class="form-check-input me-1" type="radio" value="size-2" aria-label="...">Large (14")</li>
+                                        <input class="form-check-input me-1" type="radio" value="size-2" aria-label="..."> Large (14")</li>
                                 </ul>
                             </div>
                             <br>
@@ -89,9 +89,104 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    </div>
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"><div class="card">
+                        <div class="card-body p-3 mb-2 bg-primary text-white">
+                            Choose Cheese and Sauce
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                Cheese
+                            </div>
+                            <div>
+                                <ul class="list-group">
+                                    <li class="list-group-item">How Much?</li>
+                                    <li class="list-group-item">
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option value="1">Lite</option>
+                                            <option selected>Normal</option>
+                                            <option value="2">Extra</option>
+                                        </select>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-header">
+                                Sauce
+                            </div>
+                            <div>
+                                <ul class="list-group">
+                                    <li class="list-group-item">What Type?</li>
+                                    <li class="list-group-item">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Marinara</option>
+                                        <option value="1">Alfredo</option>
+                                        <option value="2">BBQ</option>
+                                    </select>
+                                    </li>
+                                </ul>
+                                <ul class="list-group">
+                                    <li class="list-group-item">How Much?</li>
+                                    <li class="list-group-item">
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option value="1">Lite</option>
+                                            <option selected>Normal</option>
+                                            <option value="2">Extra</option>
+                                        </select>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-footer">
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                    <button class="btn btn-primary" type="button">Previous</button>
+                                    <button class="btn btn-primary me-md-2" type="button">Next Step</button>
+                                </div>
+                            </div>
+                        </div>
                     </div></div>
-                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"></div>
-                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab"></div>
+                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                        <div class="card-body p-3 mb-2 bg-primary text-white">
+                            Choose Toppings
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                Choose Meats
+                            </div>
+                            <div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <input class="form-check-input" type="checkbox" value="size-1" aria-label="..."> Beef</li>
+                                    <li class="list-group-item">
+                                        <input class="form-check-input" type="checkbox" value="size-1" aria-label="..."> Ham</li>
+                                    <li class="list-group-item">
+                                        <input class="form-check-input" type="checkbox" value="size-1" aria-label="..."> Philly Steak</li>
+                                    <li class="list-group-item">
+                                        <input class="form-check-input" type="checkbox" value="size-1" aria-label="..."> Bacon</li>
+                                </ul>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    Choose Non-Meats
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <input class="form-check-input me-1" type="checkbox" value="size-2" aria-label="..."> Green Peppers</li>
+                                    <li class="list-group-item">
+                                        <input class="form-check-input me-1" type="checkbox" value="size-2" aria-label="..."> Mushrooms</li>
+                                    <li class="list-group-item">
+                                        <input class="form-check-input" type="checkbox" value="size-1" aria-label="..."> Onions</li>
+                                    <li class="list-group-item">
+                                        <input class="form-check-input" type="checkbox" value="size-1" aria-label="..."> Jalapenos</li>
+                                </ul>
+                            </div>
+                            <br>
+                            <div class="card-footer">
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                    <button class="btn btn-primary me-md-2" type="button">Checkout</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
     </div>
 </article>
