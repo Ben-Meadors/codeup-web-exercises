@@ -34,7 +34,6 @@ ul {
 nav a {
     text-decoration: none;
     color: black;
-
     font-weight: bold;
     display: inline-block; /* inline-block to increase clickable area beyond the text */
     padding: .5em; /* increases clickable area of anchor tags on all sides by 1em */
