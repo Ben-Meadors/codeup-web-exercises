@@ -2,7 +2,15 @@
 //$(function() {
 //    alert( 'The DOM has finished loading!' );
 //});
-$('li').css('font-size', '20px');
-$('h1, p, li').css('background-color', '#FF0');
-var alertH1 = $('h1').html();
-alert(alertH1);
+
+$('h1').click(function() {
+    $(this).css('background-color', '#FF0');
+});
+$('p').dblclick(function() {
+    $(this).css('font-size', 18);
+});
+$('li').hover(function() {
+        $(this).css('background-color', '#F00');
+    }, function() {
+        $(this).css('background-color', '#000');
+});
