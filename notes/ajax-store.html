@@ -23,18 +23,55 @@
 <script src="../js/jquery.js"></script>
 
 <script>
+// (function() {
+//     "use strict";
+//     // TODO: Create an AJAX GET request for the file under data/inventory.json
+//     $.get('../data/inventory.json').done(function (data) {
+//         alert("AJAX call completed successfully!");
+//         console.log(data);
+//         var ans = '';
+//         for(var i = 0; i < data.length; i++){
+//             console.log(data[i]);
+//             ans+=('<tr> <td>' + data[i].title + '</td> <td>' + data[i].quantity + '</td> <td>' + data[i].price + '</td> <td>' + data[i].categories + '</td> </tr>')
+//         }
+//         $('#insertProducts').html(ans);
+//     })
+//     // TODO: Take the data from inventory.json and append it to the products table
+//     //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+//     //             its contents and fields
+//     //       HINT: You will want to target #insertProducts for your new HTML elements
+// })();
 (function() {
     "use strict";
     // TODO: Create an AJAX GET request for the file under data/inventory.json
-    $.get('../data/inventory.json').done(function(data){
+    $.get('../data/inventory.json').done(function (data) {
+        alert("AJAX call completed successfully!");
         console.log(data);
+        var ans = '';
+        for(var i = 0; i < data.length; i++){
+            console.log(data[i]);
+            ans+=('<tr> <td>' + data[i].title + '</td> <td>' + data[i].quantity + '</td> <td>' + data[i].price + '</td> <td>' + data[i].categories + '</td> </tr>')
+        }
+        $('#insertProducts').html(ans);
     })
     // TODO: Take the data from inventory.json and append it to the products table
     //       HINT: Your data should come back as a JSON object; use console.log() to inspect
     //             its contents and fields
     //       HINT: You will want to target #insertProducts for your new HTML elements
 })();
+
 </script>
 
 </body>
 </html>
+
+
+<!--data.forEach(function(el){-->
+<!--    console.log(el)-->
+
+<!--    var price = object.price;-->
+<!--    var toolQuantity = el.quantity;-->
+
+<!--    var htmlString = `tool price is: ${toolPrice} and there's ${toolQuantity} left`-->
+<!--    $('#container').append(`<p>${htmlString}</p>`);-->
+<!--})-->
