@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapbox API</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no'/>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%;}
+    </style>
+</head>
+<body>
+
+
+<div id='map'></div>
+<script src="../js/mapbox-geocoder-utils.js"></script>
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYmVuLW1lYWRvcnMiLCJhIjoiY2xneTVmcGE3MDY0dTNjbWkwOW5kanFuaCJ9.WfXzNPQA_6A_5VFaRU3x5g';
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/satellite-streets-v12', // style URL
+        center: [-77.5, 38.8], // starting position [lng, lat]
+        zoom: 6, // starting zoom
+    });
+    // const marker = new mapboxgl.Marker()
+    //     .setLngLat([-77.6108, 37.5248])
+    //     .addTo(map);
+    // const markerPopup = new mapboxgl.Marker()
+    //     .setLngLat([-77.6108, 37.5248])
+    //     .setPopup(new mapboxgl.Popup().setHTML("<h1>Ruth's Chris Steakhouse</h1>"))
+    //     .addTo(map);
+    // const popup = new mapboxgl.Popup()
+    //     .setLngLat([-98.489615, 29.426827])
+    //     .setHTML("<p>Codeup Rocks!</p>")
+    //     .addTo(map);
+    let favRestaurants = [
+        {
+            "name": "Ruth's Chris Steakhouse",
+            "type": "Dine-In",
+            "information": "Very fancy steakhouse that'll run you a pretty penny",
+            "price": "$$$$",
+            "longitude": -77.610870,
+            "latitude": 37.524872
+        },
+        {
+            "name": "Jollibee",
+            "type": "Fast-Food",
+            "information": "Only the greatest Filipino fast food in the US",
+            "price": "$",
+            "longitude": -77.142480,
+            "latitude": 38.8197
+        },
+        {
+            "name": "Otani Japanese Steak and Seafood",
+            "type": "Dine-In",
+            "information": "One of the best Hibachi places around Fredericksburg",
+            "price": "$$$",
+            "longitude": -77.519680,
+            "latitude": 38.292060
+        }
+    ]
+    favRestaurants.forEach(restaurant => {
+        const marker = new mapboxgl.Marker()
+            .setLngLat([restaurant.longitude, restaurant.latitude])
+            .addTo(map);
+        const popup = new mapboxgl.Popup()
+            .setHTML(`\n<h2 class="multi-popup"><u>${restaurant.name}</u></h2>\n <p>${restaurant.type}</p>\n <p>${restaurant.information}</p>\n <p>${restaurant.price}</p>\n`)
+            marker.setPopup(popup);
+    })
+</script>
+
+
+</body>
+</html>
