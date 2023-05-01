@@ -3,14 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <title>WeatherMap Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>
+    <!-- Mapbox CSS -->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet' /><style>
+    #map {
+        /* the width and height may be set to any size */
+        width: 100%;
+        height: 700px;
+    }
+</style>
 </head>
 <body>
+
+<div class="row">
+    <div class="col" id="card-1">
+        <div class="card text-center">
+            <div class="card-header">
+                Date:
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Temp/Pic Descrip</h5>
+                <hr>
+                <p class="card-text">Description:</p>
+                <p class="card-text">Humidity:</p>
+                <hr>
+                <p class="card-text">Wind:</p>
+                <hr>
+                <p class="card-text">Pressure:</p>
+            </div>
+        </div>
+    </div>
+    <div class="col" id="card-2">
+        <div class="card text-center">
+            <div class="card-header">
+                Date:
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Temp/Pic Descrip</h5>
+                <hr>
+                <p class="card-text">Description:</p>
+                <p class="card-text">Humidity:</p>
+                <hr>
+                <p class="card-text">Wind:</p>
+                <hr>
+                <p class="card-text">Pressure:</p>
+            </div>
+        </div>
+    </div>
+    <div class="col" id="card-3">
+        <div class="card text-center">
+            <div class="card-header">
+                Date:
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Temp/Pic Descrip</h5>
+                <hr>
+                <p class="card-text">Description:</p>
+                <p class="card-text">Humidity:</p>
+                <hr>
+                <p class="card-text">Wind:</p>
+                <hr>
+                <p class="card-text">Pressure:</p>
+            </div>
+        </div>
+    </div>
+    <div class="col" id="card-4">
+        <div class="card text-center">
+            <div class="card-header">
+                Date:
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Temp/Pic Descrip</h5>
+                <hr>
+                <p class="card-text">Description:</p>
+                <p class="card-text">Humidity:</p>
+                <hr>
+                <p class="card-text">Wind:</p>
+                <hr>
+                <p class="card-text">Pressure:</p>
+            </div>
+        </div>
+    </div>
+    <div class="col" id="card-5">
+        <div class="card text-center">
+            <div class="card-header">
+                Date:
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Temp/Pic Descrip</h5>
+                <hr>
+                <p class="card-text">Description:</p>
+                <p class="card-text">Humidity:</p>
+                <hr>
+                <p class="card-text">Wind:</p>
+                <hr>
+                <p class="card-text">Pressure:</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div id='map'></div>
 
 
 
 <script src="../js/jquery.js"></script>
 <script src="../js/keys.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+<script src="../js/mapbox-geocoder-utils.js"></script>
+<script src="../js/weather_map.js"></script>
 
 </body>
 </html>
