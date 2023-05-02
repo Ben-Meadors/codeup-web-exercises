@@ -45,6 +45,7 @@ let weather = {
         document.querySelector(".temp").innerText = temp;
         document.querySelector(".humidity").innerText = "Humidity: " + humidity + "%";
         document.querySelector(".wind").innerText = "Wind speed: " + speed + "km/h";
+        document.querySelector(".weather").classList.remove("loading");
     },
     search: function(){
        this.fetchWeather(document.querySelector(".search").value);
@@ -53,13 +54,13 @@ let weather = {
 
 document.querySelector(".city-search").addEventListener("click", function (){
     weather.search();
-})
+});
 
 document.querySelector(".search").addEventListener("keyup", function (event){
     if (event.key == "Enter"){
-        weather.search()
+        weather.search();
     }
-})
+});
 
 
-
+weather.fetchWeather("Fredericksburg")
