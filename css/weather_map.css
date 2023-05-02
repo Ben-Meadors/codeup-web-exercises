@@ -1,0 +1,11 @@
+body{
+    background: #848487;
+}
+
+
+.card{
+    background: #000000d0;
+    color: white;
+    border-radius: 30px;
+    margin-bottom: 25px;
+}
