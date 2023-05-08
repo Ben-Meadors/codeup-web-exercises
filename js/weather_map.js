@@ -7,10 +7,10 @@ mapboxgl.accessToken = MAPBOX_KEY;
         container: 'map', // container ID
         style: 'mapbox://styles/mapbox/satellite-streets-v12', // style URL
         center: [-77, 38], // starting position [lng, lat]
-        zoom: 10, // starting zoom
+        zoom: 8, // starting zoom
     })
     map.scrollZoom.disable(); //i dont like scroll zoom so i disabled it
-
+    //added zoom buttons
     const nav = new mapboxgl.NavigationControl();
     map.addControl(nav);
 
@@ -31,6 +31,7 @@ let marker = new mapboxgl.Marker({
     }
     fetchWeather(); //receives weather for location
     function fetchWeather(){
+        console.log(weatherOptions)
         $.get("https://api.openweathermap.org/data/2.5/forecast", weatherOptions).done(function (data) {
             displayWeather(data)
     });
@@ -38,6 +39,7 @@ let marker = new mapboxgl.Marker({
 
     // function to add weather data to multiple cards
     function displayWeather(data){
+        console.log('data: ', data);
         $(".row").html("")
         $(".city").html(`${data.city.name}`)
         for (let i = 0; i <= 39; i = i + 8) {
@@ -67,7 +69,7 @@ let marker = new mapboxgl.Marker({
         }
     }
 
-// added event listener to change weather to location of entered value in search bar
+// added event listener to change weather to location of entered value in search bar, also moves marker to new location
 document.querySelector(".search-button").addEventListener("click", function (e){
     e.preventDefault()
     var searchInput = document.querySelector(".search-bar").value
@@ -85,9 +87,10 @@ const lngLat = marker.getLngLat();
 function onDragEnd(){
     const lngLat = marker.getLngLat();
     console.log(lngLat);
-    // weatherOptions.lon = lngLat.lon;
     // weatherOptions.lat = lngLat.lat;
-    // fetchWeather();
+    weatherOptions.lon = lngLat.lng;
+    weatherOptions.lat = lngLat.lat;
+    fetchWeather();
 }
 marker.on('dragend', onDragEnd);
 
